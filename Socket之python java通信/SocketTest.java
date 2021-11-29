@@ -10,7 +10,8 @@ import java.net.Socket;
 public class SocketTest {
     public static void main(String[] args) {
         try {
-            Socket socket = new Socket("1.15.66.61", 19999);
+            Socket socket = new Socket("*.*.*.*", 19999);
+            //Socket socket = new Socket("localhost", 19999);
             System.out.println("Client start!");
             PrintWriter out = new PrintWriter(socket.getOutputStream()); // 输出，to 服务器 socket
             BufferedReader in = new BufferedReader(new InputStreamReader(
